@@ -9,5 +9,6 @@ urlpatterns = [
     path('api-auth', include('rest_framework.urls',
          namespace='rest_framework')),  # <- add
     path('', include('user.urls')),  # <- add
-    path('', include('messenger.urls'))
+    path('', include('messenger.urls')),
+    path('', include('feed.urls'))
 ]
