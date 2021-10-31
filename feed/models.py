@@ -19,4 +19,4 @@ class Profile(models.Model):
     gender=models.CharField(max_length=1,choices=GENDER_CHOICES,default=None)
 
     def __str__(self):
-        return self.name
+        return str(self.pk)

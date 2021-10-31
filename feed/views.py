@@ -9,11 +9,11 @@ from messenger.permissions import IsOwnerOrReadOnly
 
 
 
-class ProfileDetails(generics.RetrieveUpdateDestroyAPIView):
+class ProfileDetails(generics.ListAPIView):
     # add code here
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
     permissions_classes = [permissions.IsAuthenticatedOrReadOnly]
-    lookup_fields = 'username'
+    
    
