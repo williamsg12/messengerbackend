@@ -133,7 +133,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Cors
-CORS_ALLOW_ALLORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 #django REest FRamework
 REST_FRAMEWORK = {

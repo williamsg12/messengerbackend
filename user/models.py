@@ -4,13 +4,13 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    email = models.EmailField(verbose_name='email',
-                              max_length=255, unique=True)
+    username = models.CharField(max_length=200, unique=True)
+    email = models.CharField(max_length=200, unique=True)
+    password = models.CharField(max_length=200)
     REQUIRED_FIELDS = ['username']
     USERNAME_FIELD = 'email'
 
     def get_username(self):
         return self.email
 
-    def get_my_posts(self):
-        return self.post_set.all()
+
